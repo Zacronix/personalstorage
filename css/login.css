@@ -9,7 +9,7 @@ body {
   background-size: cover;
 }
 
-.content {
+.content {                  /* content = invisible div with text and input */
   text-align: center;
   color: white;
   width: 100%;
@@ -74,6 +74,6 @@ body {
 
 .extra {
   width: 20%;
-  height: 100%;
+  height: 100%;        
   margin: auto;
 }
