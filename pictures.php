@@ -12,7 +12,7 @@
     <div class="searchbar">
       <p id="logo">PERSONAL STORAGE //</p>
       <p id="logoname">BY JELMER HALFF</p>
-      <a href="login.php"><p id="logout">Log Out</p></a>
+      <a href="index.php"><p id="logout">Log Out</p></a>
     </div>
 
     <div class="navbar">

@@ -2,7 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/designs.css">
+	
+    <link rel="stylesheet" href="css/base/app.css">
+    <link rel="stylesheet" href="css/pages/designs.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/sidebar.css">
+	
     <title>My files</title>
   </head>
   <body>
@@ -12,7 +17,7 @@
     <div class="searchbar">
       <p id="logo">PERSONAL STORAGE //</p>
       <p id="logoname">BY JELMER HALFF</p>
-      <a href="login.php"><p id="logout">Log Out</p></a>
+      <a href="index.php"><p id="logout">Log Out</p></a>
     </div>
 
     <div class="navbar">
