@@ -28,12 +28,12 @@ if (isset($_POST['username'])) {
 <html>
   <head>
     <meta charset="utf-8">
-	
+
     <link rel="stylesheet" href="css/base/app.css">
     <link rel="stylesheet" href="css/pages/login.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/sidebar.css">
-	
+
     <title>Login screen</title>
   </head>
   <body>
@@ -41,16 +41,16 @@ if (isset($_POST['username'])) {
 	<div class="flex-container">
 		<div class="content">
 		  <form method="post" action="index.php">
-		  
+
 			<h1>Sign in</h1>
 			<p>Please sign in to continue.</p>
-		  
+
 			<label>Username:</label>
 			<input type="text" name="username"></input>
-			
+
 			<label>Password:</label>
-			<input type="password" name="password"></input> 
-			
+			<input type="password" name="password"></input>
+
 			<div class="form-buttons">
 				<div class="login">
 					<input type="submit" value="Log In" class="login-btn">
@@ -60,9 +60,9 @@ if (isset($_POST['username'])) {
 
 			<div class="extra">
 			  <a href="index.php">Forgot password?</a>
-			  <a href="files.php">Click here to login as a guest.</a> 
+			  <a href="index.php">Click here to login as a guest.</a>
 			</div>
-			
+
 		  </form>
 		</div>
 	</div>

@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-	
+
     <link rel="stylesheet" href="css/base/app.css">
     <link rel="stylesheet" href="css/pages/designs.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/sidebar.css">
-	
+
     <title>My files</title>
   </head>
   <body>
@@ -63,24 +63,7 @@
       <a href="#"><div class="navbar3img"></div></a>
     </div>
 
-    <!-- Footer designs -->
-
-    <h2 id="footers">Footers</h2>
-
-    <div class="footer1">
-      <p>FOOTER 1 NAME</p>
-      <a href="#"><div class="footer1img"></div></a>
-    </div>
-
-    <div class="footer2">
-      <p>FOOTER 2 NAME</p>
-      <a href="#"><div class="footer2img"></div></a>
-    </div>
-
-    <div class="footer3">
-      <p>FOOTER 3 NAME</p>
-      <a href="#"><div class="footer3img"></div></a>
-    </div>
+    <!-- Navbar designs end -->
 
   </body>
 </html>

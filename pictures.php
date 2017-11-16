@@ -2,7 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/pictures.css">
+
+    <link rel="stylesheet" href="css/base/app.css">
+      <link rel="stylesheet" href="css/pages/pictures.css">
+      <link rel="stylesheet" href="css/components/header.css">
+      <link rel="stylesheet" href="css/components/sidebar.css">
+
     <title>My files</title>
   </head>
   <body>
