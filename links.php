@@ -27,11 +27,17 @@
 
 
 
-      <div class="navbar">
+			<div class="navbar">
         <h1 class="logo">PERSONAL STORAGE</h1>
         <input type="text" placeholder="Search..." id="search">
 
-        <h3 class="user"><a href="#"><?php echo $username ?></a></h3>
+				<div class="dropdown">
+					<h3 class="user"><a href="#"><?php echo $username ?></a></h3>
+					<div class="dropdown-content">
+						<p><a href="index.php">LOG OUT</a></p>
+					</div>
+				</div>
+
       </div>
 
       <div class="sidebar">
