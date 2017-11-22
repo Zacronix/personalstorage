@@ -13,7 +13,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="/css/base/app.css">
-    <link rel="stylesheet" href="/css/pages/files.css">
+    <link rel="stylesheet" href="/css/pages/upload.css">
 
 		<script src="https://use.fontawesome.com/e900784a2c.js"></script>
 
@@ -31,13 +31,7 @@
         <h1 class="logo">PERSONAL STORAGE</h1>
         <input type="text" placeholder="Search..." id="search">
 
-				<div class="dropdown">
-					<h3 class="user"><a href="#"><?php echo $username ?></a></h3>
-					<div class="dropdown-content">
-						<p><a href="index.php">LOG OUT</a></p>
-					</div>
-				</div>
-				
+        <h3 class="user"><a href="#"><?php echo $username ?></a></h3>
       </div>
 
       <div class="sidebar">
@@ -55,27 +49,10 @@
 
 
 
-      <h2 class="title">Dashboard</h2>
-      <h3 class="subtitle">Statistics & Details</h3>
+			<h2 class="title">Files</h2>
+      <h3 class="subtitle">Upload & Download</h3>
 
-      <div class="stats-container">
-        <div class="storagestats">
-          <h2>STORAGE</h2>
-          <b>0 bytes</b><h3 class="storagesubtitle">USED OUT OF 5GB</h3>
-        </div>
-
-        <div class="otherstats">
-          <h2>OTHER STATS</h2>
-          <h3>These are some other statistics</h3>
-        </div>
-      </div>
-
-      <div class="recentfiles">
-        <h2 class="recentfilestitle">RECENT FILES</h2>
+			<div class="filesystem">
+        <h2 class="filesystemtitle">MY FILES</h2>
         <h3>No files uploaded yet...</h3>
       </div>
-
-
-
-  </body>
-</html>

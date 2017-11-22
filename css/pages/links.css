@@ -1,13 +1,135 @@
-.titletext {
+.title {
+  color: rgb(108, 108, 108);
+  margin-top: -87vh;
+  margin-left: 8.5vw;
+  font-size: 4.5vh;
+}
+
+.subtitle {
+  color: rgb(124, 124, 124);
+  margin-left: 13.5vw;
+  margin-top: -7vh;
+  font-size: 2.4vh;
+}
+
+
+
+.link001 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-left: 8.5vw;
+  margin-top: 8vh;
   text-align: center;
-  margin-top: -130%;
-  margin-left: 19%;
+  float: left;
 }
 
-.titletext h2 {
-  font-size: 4vh;
+.link001-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.titletext h3 {
-  font-size: 3vh;
+.link002 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-right: 4vw;
+  margin-top: 8vh;
+  text-align: center;
+  float: right;
+}
+
+.link002-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.link003 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-top: 8vh;
+  text-align: center;
+  float: left;
+  margin-left: 8.5vw;
+}
+
+.link003-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.link004 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-top: 8vh;
+  text-align: center;
+  float: right;
+  margin-right: 4vw;
+}
+
+.link004-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.link005 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-top: 8vh;
+  text-align: center;
+  float: left;
+  margin-left: 8.5vw;
+}
+
+.link005-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.link006 {
+  width: 40vw;
+  height: 15vh;
+  background-color: white;
+  margin-top: 8vh;
+  text-align: center;
+  float: right;
+  margin-right: 4vw;
+}
+
+.link006-image {
+  width: 20%;
+  height: 100%;
+  background: url("../../images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

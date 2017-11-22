@@ -1,13 +1,97 @@
-.titletext {
-  text-align: center;
-  margin-top: -260vh;
-  margin-left: 19%;
+.title {
+  color: rgb(108, 108, 108);
+  margin-top: -87vh;
+  margin-left: 8.5vw;
+  font-size: 4.5vh;
 }
 
-.titletext h2 {
+.subtitle {
+  color: rgb(124, 124, 124);
+  margin-left: 18vw;
+  margin-top: -7vh;
+  font-size: 2.4vh;
+}
+
+
+
+/* Stats begin */
+
+.storagestats {
+  width: 35vw;
+  height: 20vh;
+  background-color: rgb(249, 249, 249);
+  color: black;
+  margin-left: 8.5vw;
+  margin-top: 6vh;
+  padding-top: 0.1vh;
+  padding-left: 2vw;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 2%;
+}
+
+.storagestats h2 {
+  color: rgb(222, 65, 43);
   font-size: 4vh;
 }
 
-.titletext h3 {
-  font-size: 3vh;
+.storagestats b, .storagesubtitle {
+  display: inline-flex;
+  font-size: 2.5vh;
 }
+
+.storagesubtitle {
+  color: rgb(124, 124, 124);
+  margin-left: 0.5vw;
+}
+
+
+
+.otherstats {
+  width: 35vw;
+  height: 20vh;
+  background-color: rgb(249, 249, 249);
+  color: black;
+  margin-left: 8.5vw;
+  margin-top: 6vh;
+  padding-top: 0.1vh;
+  padding-left: 2vw;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 2%;
+}
+
+.otherstats h2 {
+  font-size: 4vh;
+}
+
+.otherstats h3 {
+  font-size: 2.5vh;
+}
+
+
+
+.recentfiles {
+  width: 45vw;
+  height: 62vh;
+  background-color: rgb(249, 249, 249);
+  color: black;
+  margin-left: 50vw;
+  margin-top: -47vh;
+  padding-top: 0.1vh;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 2%;
+}
+
+.recentfilestitle {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 4vh;
+  padding: 2vh;
+  margin: 0;
+}
+
+.recentfiles h3 {
+  font-size: 2.5vh;
+  padding: 2vh;
+  margin: 0;
+}
+
+/* Stats end */
