@@ -44,7 +44,7 @@
 				<ul>
 					<li><a href="files.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li><a href="links.php"><i class="fa fa-link" aria-hidden="true"></i></a></li>
-					<li><a href="upload.php"><i class="fa fa-upload" aria-hidden="true"></i></a></li>
+					<li><a href="upload.php" class="active"><i class="fa fa-upload" aria-hidden="true"></i></a></li>
 					<li><a href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
 				</ul>
       </div>

@@ -1,9 +1,9 @@
 <?php
 session_start();
-$username = $_SESSION['username'];
-
-if ($username === null) {
-    header("Location: index.php");
+$username = $_SESSION["username"];
+if(!isset($_SESSION["username"]))
+{
+    header("location:index.php?action=login");
 }
 ?>
 
@@ -33,7 +33,7 @@ if ($username === null) {
     <div class="dropdown">
         <h3 class="user"><a href="#"><?php echo $username ?></a></h3>
         <div class="dropdown-content">
-            <p><a href="index.php">LOG OUT</a></p>
+            <p><a href="logout.php">LOG OUT</a></p>
         </div>
     </div>
 
@@ -41,7 +41,7 @@ if ($username === null) {
 
 <div class="sidebar">
     <ul>
-        <li><a href="files.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="files.php" class="active"><i class="fa fa-home" aria-hidden="true"></i></a></li>
         <li><a href="links.php"><i class="fa fa-link" aria-hidden="true"></i></a></li>
         <li><a href="upload.php"><i class="fa fa-upload" aria-hidden="true"></i></a></li>
         <li><a href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i></a></li>

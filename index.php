@@ -1,67 +1,98 @@
 <?php
+$connect = mysqli_connect("localhost", "root", "Plien7591", "loginsystem");
 session_start();
-try {
-    $db = new PDO('mysql:host=localhost;dbname=personalstorage', "root", "Plien7591");
-    if (isset($_POST[ 'login' ])) {
-        $username = filter_input(INPUT_POST, 'username');
-        $password = filter_input(INPUT_POST, 'password');
-
-        $query = $db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
-        $query->bindParam("username", $username);
-        $query->bindParam("password", $password);
-        $query->execute();
-
-        $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        if ($query->rowCount() == 1) {
-            $_SESSION['username'] = $result[0]['username'];
-            header("Location:"."files.php");
-        } else {
-          //
+if (isset($_SESSION["username"])) {
+    header("location:files.php");
+}
+if (isset($_POST["register"])) {
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        echo '<script>alert("Both Fields are required")</script>';
+    } else {
+        $username = mysqli_real_escape_string($connect, $_POST["username"]);
+        $password = mysqli_real_escape_string($connect, $_POST["password"]);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO users(username, password) VALUES('$username', '$password')";
+        if (mysqli_query($connect, $query)) {
+            echo '<script>alert("Registration success!")</script>';
         }
     }
-} catch(PDOException $e) {
-    die("Error!: ".$e->getMessage());
+}
+if (isset($_POST["login"])) {
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        echo '<script>alert("Both Fields are required")</script>';
+    } else {
+        $username = mysqli_real_escape_string($connect, $_POST["username"]);
+        $password = mysqli_real_escape_string($connect, $_POST["password"]);
+        $query = "SELECT * FROM users WHERE username = '$username'";
+        $result = mysqli_query($connect, $query);
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_array($result)) {
+                if (password_verify($password, $row["password"])) {
+                    //return true;
+                    $_SESSION["username"] = $username;
+                    header("location:files.php");
+                } else {
+                    //return false;
+                    echo '<script>alert("Wrong User Details")</script>';
+                }
+            }
+        } else {
+            echo '<script>alert("Wrong User Details")</script>';
+        }
+    }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="css/base/app.css">
-    <link rel="stylesheet" href="css/pages/login.css">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
-
-    <title>Login screen</title>
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pages/style.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="content">
-            <form method="post">
-                <h1>Sign in</h1>
-                <p>Please sign in to continue.</p>
-
-                <label>Username:</label>
-                <input type="text" name="username"></input>
-
-                <label>Password:</label>
-                <input type="password" name="password"></input>
-
-                <div class="form-buttons">
-                    <div class="login">
-                        <input type="submit" name="login" value="Log In" class="login-btn">
-                    </div>
-                    <input type="submit" value="Register" class="login-btn">
-                </div>
-
-                <div class="extra">
-                    <a href="#">Forgot password?</a>
-                    <a href="#">Click here to login as a guest.</a>
-                </div>
-            </form>
-        </div>
-    </div>
+<br/><br/>
+<div class="container">
+    <?php
+    if (isset($_GET["action"]) == "login") {
+        ?>
+        <h2 class="title">Login</h2>
+        <br/>
+        <form method="post">
+            <label>Username:</label>
+            <input type="text" name="username" class="form-control"/>
+            <br/>
+            <label>Password:</label>
+            <input type="password" name="password" class="form-control"/>
+            <br/>
+            <div class="buttons">
+                <input type="submit" name="login" value="Login" class="button"/>
+            </div>
+            <br/>
+            <p><a href="index.php">Click here to register</a></p> <br>
+        </form>
+        <?php
+    } else {
+        ?>
+        <h2 class="title">Register</h2>
+        <br/>
+        <form method="post">
+            <label>Enter Username:</label>
+            <input type="text" name="username" class="form-control"/>
+            <br/>
+            <label>Enter Password:</label>
+            <input type="text" name="password" class="form-control"/>
+            <br/>
+            <div class="buttons">
+                <input type="submit" name="register" value="Register" class="button"/>
+            </div>
+            <br/>
+            <p><a href="index.php?action=login">Click here to login</a></p> <br>
+        </form>
+        <?php
+    }
+    ?>
+</div>
 </body>
 </html>
